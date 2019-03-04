@@ -1,6 +1,6 @@
 @import '../../styles.scss';
 $image-overlay-opacity: 0.7;
-$product-main-color: $green;
+$product-main-color: pink;
 
 .product {
   cursor: pointer;
@@ -45,12 +45,12 @@ $product-main-color: $green;
 
     .product_name {
       font-size: 22px;
-      color: #393c45;
+      color: pink;
     }
 
     p {
       font-size: 16px;
-      color: #b1b1b3;
+      color: pink;
       margin: 0;
     }
 
@@ -128,7 +128,7 @@ $product-main-color: $green;
 
     th[scope="row"] {
       font-size: 20px;
-      color: #393c45;
+      color: pink;
       font-weight: normal;
       background-color: #f9f9f9;
       border: 1px solid #eee;
@@ -154,7 +154,7 @@ $product-main-color: $green;
     thead {
       th {
         font-size: 20px;
-        color: #393c45;
+        color: pink;
         font-weight: normal;
       }
     }

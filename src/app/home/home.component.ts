@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ProductService } from '../shared/product.service'
 
 @Component({
@@ -13,7 +13,12 @@ export class HomeComponent implements OnInit {
   products: any = [];
 
   ngOnInit() {
-    this.products = this.productService.getProducts();
+    this.filterProducts();
+  }
+
+  filterProducts(maxPrice?: any) {
+    maxPrice = maxPrice ? parseFloat(maxPrice) : NaN;
+    this.products = this.productService.getProducts().filter(p => isNaN(maxPrice) || parseFloat(p.price.replace("$", "")) <= maxPrice);
   }
 
   productsToCompare: any = [];
